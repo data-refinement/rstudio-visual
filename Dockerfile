@@ -6,10 +6,12 @@ RUN apt-get update && apt-get -y upgrade
 
 # libpnd-dev, for vdiffr
 # libcairo2-dev, libxt-dev for Cairo package
+# libxml2-dev, for tidyverse
 RUN apt-get install -y build-essential \
   libpng-dev \
 	libcairo2-dev \
   libxt-dev \
+  libxml2-dev \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/*
 
